@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 3000;
 
 // MongoDB connection
 const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.set('strictQuery', true); // Optional: Suppress deprecation warnings for strictQuery
+mongoose.connect(MONGODB_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
 const pdfSchema = new mongoose.Schema({
   pdfData: Buffer, // Store PDF as binary data
