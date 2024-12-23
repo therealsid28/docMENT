@@ -1,0 +1,21 @@
+# The project name on Railway
+name = "docMENT"
+
+# The service name for your Express app
+[service]
+name = "server"
+path = "./" # Adjust if your project files are in a subdirectory
+
+# Define how Railway should build your app
+[service.build]
+builder = "Nixpacks" # Use Nixpacks for auto-detection of Node.js apps
+
+# Define environment variables
+[service.env]
+PORT = "3000"
+MONGODB_URI = "mongodb+srv://itsaniketsingh04:trrq8959@docmentcluster0.ddud4.mongodb.net/?retryWrites=true&w=majority&appName=docMENTCluster0"
+
+
+# Healthcheck endpoint for the deployment
+[healthcheck]
+path = "/"
