@@ -26,7 +26,7 @@ const PDFModel = mongoose.model('PDF', pdfSchema);
 
 // Enable CORS
 app.use(cors({
-  origin: 'http://127.0.0.1:3001', // Replace with your frontend origin
+  origin: 'https://doc-ment-hmtt.vercel.app/', // Replace with your frontend origin
   methods: ['GET', 'POST'],
 }));
 
