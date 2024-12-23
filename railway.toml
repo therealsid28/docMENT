@@ -3,7 +3,7 @@ name = "docMENT"
 
 # The service name for your Express app
 [service]
-name = "server"
+name = "index"
 path = "./" # Adjust if your project files are in a subdirectory
 
 # Define how Railway should build your app
